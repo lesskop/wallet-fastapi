@@ -6,3 +6,4 @@ venv*
 logs
 .env
 *.sqlite3
+*.csv

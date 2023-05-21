@@ -11,6 +11,10 @@ tags_metadata = [
         'name': 'operations',
         'description': 'Work with operations'
     },
+    {
+        'name': 'reports',
+        'description': 'Exporting and importing reports'
+    }
 ]
 
 app = FastAPI(
