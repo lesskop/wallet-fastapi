@@ -1,12 +1,21 @@
 from fastapi import FastAPI
-from fastapi.responses import RedirectResponse
 
 from .api import router
 
-app = FastAPI()
+tags_metadata = [
+    {
+        'name': 'users',
+        'description': 'Registration and authorization'
+    },
+    {
+        'name': 'operations',
+        'description': 'Work with operations'
+    },
+]
+
+app = FastAPI(
+    title='Wallet',
+    description='Personal expenses and income accounting service',
+    openapi_tags=tags_metadata
+)
 app.include_router(router)
-
-
-@app.get('/')
-def root():
-    return RedirectResponse(url='/docs')

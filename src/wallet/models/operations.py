@@ -6,7 +6,7 @@ from pydantic import BaseModel, condecimal
 
 class OperationKind(str, Enum):
     INCOME = 'income'
-    OUTCOME = 'outcome'
+    EXPENSE = 'expense'
 
 
 class OperationBase(BaseModel):
