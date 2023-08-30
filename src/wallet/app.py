@@ -1,5 +1,6 @@
 from fastapi import FastAPI
 
+from .database import Base, engine
 from .api import router
 
 tags_metadata = [
@@ -16,6 +17,8 @@ tags_metadata = [
         'description': 'Exporting and importing reports'
     }
 ]
+
+Base.metadata.create_all(bind=engine)
 
 app = FastAPI(
     title='Wallet',
