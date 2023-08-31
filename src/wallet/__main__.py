@@ -1,6 +1,6 @@
 import uvicorn
 
-from .settings import settings
+from wallet.settings import settings
 
 uvicorn.run(
     'wallet.app:app',

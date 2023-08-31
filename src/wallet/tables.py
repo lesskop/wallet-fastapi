@@ -1,5 +1,5 @@
 from sqlalchemy import Column, Integer, String, Numeric, Date, Text, ForeignKey
-from .database import Base
+from wallet.database import Base
 
 
 class User(Base):

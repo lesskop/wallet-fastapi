@@ -1,7 +1,7 @@
 from fastapi import FastAPI
 
-from .database import Base, engine
-from .api import router
+from wallet.database import Base, engine
+from wallet.api import router
 
 tags_metadata = [
     {
